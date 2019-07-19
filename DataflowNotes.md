@@ -1,27 +1,24 @@
 Dataflow Notes
 
+API:
+	findAllProfiles
+	findOne - id
+	editOne - id
+	insertProfile - userId
+
+
 Base Objects to be stored:
+	User
+		fields required by passport
+		businesses - [Business(es)]
 
-User
-	- fields required by passport
-	- attending - [Events]
-	- hosting - [Events]
-
-Events
-	- owner - User
-	- title
-	- description
-	- location
-	- datetime
-	- attendees [Users]
-
-Anon User:
-	- can browse events
-	- can join events but kick out to login screen
-
-Logged in User:
-	- can browse events
-	- can join events as attendee
-	- can create new events
-	- can modify events they are the owner of
-
+	Business (profile)
+		Name
+		Location
+		Description
+		contact info 
+		Business category
+		Services Provided
+		Audience
+		Followers [Business(es)]
+		Following [Business(es)]

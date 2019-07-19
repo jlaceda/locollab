@@ -1,2 +1,3 @@
-# project3team1
-Project 3 Team 1
+# locollab
+## A social networking app for small local businesses
+

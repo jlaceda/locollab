@@ -1,0 +1,10 @@
+.wrapper {
+    background: url('../../../public/images/bg.png') no-repeat center center fixed;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    overflow: auto;
+    padding-bottom: 50px;
+  }

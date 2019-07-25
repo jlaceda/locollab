@@ -1,10 +1,12 @@
-import { Schema as _Schema, model } from "mongoose";
-const Schema = _Schema;
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema;
+const model = mongoose.model;
 
 const businessSchema = new Schema({
-  name: { type: String, required: true }
+  name: { type: String, required: true },
+  location: { type: String },
+  description: { type: String },
+  category: { type: String }
 });
 
-const Business = model("Business", businessSchema);
-
-export default Business;
+module.exports = model("Business", businessSchema);

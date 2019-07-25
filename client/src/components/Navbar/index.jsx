@@ -21,6 +21,18 @@ function Navbar() {
               Login
             </Link>
           </li>
+          ||
+          <li className="nav-item">
+            <Link
+              to="/newProfile"
+              className={
+                window.location.pathname === "/"
+              }
+            >
+              Register
+            </Link>
+          </li>
+
         </div>
       </div>
     </nav>

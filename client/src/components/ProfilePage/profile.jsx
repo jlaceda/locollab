@@ -5,7 +5,7 @@ import "./style.css";
 
 function Profile() {
 return(
-<div class="containter">
+<div>
 <div class="jumbotron">
   <h1 class="display-4">Business Name</h1>
   <h4>Contact Us:</h4>

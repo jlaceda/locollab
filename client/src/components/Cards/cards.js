@@ -32,6 +32,59 @@ export default function MediaCard() {
   const classes = useStyles();
 
   return (
+    <div>
+      <Card className={classes.card}>
+     
+      
+     <CardMedia
+       className={classes.media}
+       //image="/Users/SophieOT/Documents/uwcode/projects/project3/project3team1/client/public/images/"
+       title="Panera Logo"
+     />
+    
+     <CardContent classname={classes.details}>
+     <CardActionArea className="businessName">
+       <Typography gutterBottom variant="h5" component="h2" className={classes.business}>
+         Panera
+       </Typography>
+     </CardActionArea>
+     <CardActionArea>
+       <Typography variant="body2" color="textSecondary" component="p">
+         This is where the details about the business idea go. 
+         It is a brief explanation of what the business is looking to do in collaboration with another business. 
+         To get specific details, the user can click the text.
+         To go to the business' profile, the user clicks the name.
+       </Typography>
+     </CardActionArea>
+     </CardContent>
+
+ </Card>
+ <Card className={classes.card}>
+     
+      
+        <CardMedia
+          className={classes.media}
+          //image="/Users/SophieOT/Documents/uwcode/projects/project3/project3team1/client/public/images/"
+          title="Panera Logo"
+        />
+       
+        <CardContent classname={classes.details}>
+        <CardActionArea className="businessName">
+          <Typography gutterBottom variant="h5" component="h2" className={classes.business}>
+            Panera
+          </Typography>
+        </CardActionArea>
+        <CardActionArea>
+          <Typography variant="body2" color="textSecondary" component="p">
+            This is where the details about the business idea go. 
+            It is a brief explanation of what the business is looking to do in collaboration with another business. 
+            To get specific details, the user can click the text.
+            To go to the business' profile, the user clicks the name.
+          </Typography>
+        </CardActionArea>
+        </CardContent>
+   
+    </Card>
     <Card className={classes.card}>
      
       
@@ -58,5 +111,32 @@ export default function MediaCard() {
         </CardContent>
    
     </Card>
+    <Card className={classes.card}>
+     
+      
+        <CardMedia
+          className={classes.media}
+          //image="/Users/SophieOT/Documents/uwcode/projects/project3/project3team1/client/public/images/"
+          title="Panera Logo"
+        />
+       
+        <CardContent classname={classes.details}>
+        <CardActionArea className="businessName">
+          <Typography gutterBottom variant="h5" component="h2" className={classes.business}>
+            Panera
+          </Typography>
+        </CardActionArea>
+        <CardActionArea>
+          <Typography variant="body2" color="textSecondary" component="p">
+            This is where the details about the business idea go. 
+            It is a brief explanation of what the business is looking to do in collaboration with another business. 
+            To get specific details, the user can click the text.
+            To go to the business' profile, the user clicks the name.
+          </Typography>
+        </CardActionArea>
+        </CardContent>
+   
+    </Card>
+    </div>
   );
 }

@@ -5,7 +5,11 @@ import './components/Navbar/index';
 import "./App.css";
 import Navbar from "./components/Navbar/index";
 import Main from "./components/Main";
+<<<<<<< HEAD
 import Profile from "./components/ProfilePage/profile"
+=======
+import Cards from "./components/Cards/cards"
+>>>>>>> 158f6b838bb61b2ebbe3dcf815d7b55e8db00ffb
 
 class App extends Component {
   render() {
@@ -15,7 +19,7 @@ class App extends Component {
         <Switch>
         <Route path='/profile' components={Profile}/>
         <Route path='/newProfile' component={BizProfile}/>
-        <Route path='/main' component={Main}/>
+        <Route path='/' component={Cards}/>
       </Switch>
       </Router>
     );

@@ -5,6 +5,7 @@ import './components/Navbar/index';
 import "./App.css";
 import Navbar from "./components/Navbar/index";
 import Main from "./components/Main";
+import Cards from "./components/Cards/cards"
 
 class App extends Component {
   render() {
@@ -13,7 +14,7 @@ class App extends Component {
         <Navbar />
         <Switch>
         <Route path='/newProfile' component={BizProfile}/>
-        <Route path='/main' component={Main}/>
+        <Route path='/' component={Cards}/>
       </Switch>
       </Router>
     );

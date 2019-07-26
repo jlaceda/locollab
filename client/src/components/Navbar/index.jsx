@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import './style.css';
 
 function Navbar() {
 
@@ -21,7 +22,7 @@ function Navbar() {
               Login
             </Link>
           </li>
-          ||
+          <span className="text-white pipe">&nbsp;|&nbsp;</span>
           <li className="nav-item">
             <Link
               to="/newProfile"

@@ -1,0 +1,69 @@
+#head,
+#body {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jumbotron {
+    width: 100%;
+    height: 100%;
+
+}
+
+.container {
+    background-color: lightblue;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+   
+
+}
+
+#body {
+    background-color: lightblue;
+    margin-top: 0px;
+}
+
+#head {
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+#header {
+    font-family: Verdana, Geneva, sans-serif;
+    color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: rgb(250, 192, 85);
+    width: 100%;
+    height: 60px;
+    box-shadow: 3px 3px 3px grey;
+    align-content: center;
+    padding: 20px;  
+}
+
+#content {
+    padding: 30px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.card {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; 
+    box-shadow: 3px 3px 3px grey;
+}
+
+.date {
+    margin: 10px;
+    font-size: 60%;
+    color: grey;
+}
+
+.card-title {
+    font-size: 150%;
+}

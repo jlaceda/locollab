@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import photo from "../ProfilePage/bgsmall.png"
+import photo from "../Profile/bgsmall.png"
 
 
 function Profile() {
@@ -9,10 +9,10 @@ return(
 <div className="row" id="head">
 <div className="jumbotron">
   <div className="row">
-  <div className="col">
+  <div className="col-4">
   <img src={photo} className="mr-3" alt="..."></img>
   </div>
-  <div className="col">
+  <div className="col-8">
   <h1 className="display-4">Business Name</h1>
   <h4>Contact Us:</h4>
   <h5>Phone: </h5>

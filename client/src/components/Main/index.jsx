@@ -7,16 +7,56 @@ function Main() {
 return(
 <div class="container">
 <div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
+  <h1 class="display-4">Latest Posts</h1>
 </div>
-<div class="media">
-  <img src="..." class="mr-3" alt="..."></img>
-  <div class="media-body">
-    <h5 class="mt-0">Media heading</h5>
-    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    
+
+<div class="card">
+  <div class="card-header">
+    Jamba Juice 
   </div>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
+  
+  <div class="card-body">
+
+    <h5 class="card-title">Free Samples</h5>
+    <p class="card-text">We would like to provide samples of our newest summer smoothies to businesses in the area.</p>
+    <a href="#" class="btn btn-primary">More Info</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    Jamba Juice 
+  </div>
+  
+  <div class="card-body">
+
+    <h5 class="card-title">Free Samples</h5>
+    <p class="card-text">We would like to provide samples of our newest summer smoothies to businesses in the area.</p>
+    <a href="#" class="btn btn-primary">More Info</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    Jamba Juice 
+  </div>
+  
+  <div class="card-body">
+
+    <h5 class="card-title">Free Samples</h5>
+    <p class="card-text">We would like to provide samples of our newest summer smoothies to businesses in the area.</p>
+    <a href="#" class="btn btn-primary">More Info</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    Jamba Juice 
+  </div>
+  
+  <div class="card-body">
+
+    <h5 class="card-title">Free Samples</h5>
+    <p class="card-text">We would like to provide samples of our newest summer smoothies to businesses in the area.</p>
+    <a href="#" class="btn btn-primary">More Info</a>
+  </div>
 </div>
 </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import StockPhoto from "../../bgsmall.png"
+import StockPhoto from "./bgsmall.png"
 
 
 

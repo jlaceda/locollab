@@ -8,7 +8,7 @@ import Main from "./components/Main";
 import ProfilePage from "./components/ProfilePage"
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <Router>
         <Navbar />
@@ -19,8 +19,8 @@ class App extends Component {
         <Route path='/main' component={Main}></Route>
       </Switch>
       </Router>
-    );
+    )
   }
 }
 
-export default App;
+export default App

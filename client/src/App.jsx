@@ -1,11 +1,10 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import BizProfile from "./components/BizProfile"
-import './components/Navbar/index';
-import "./App.css";
-import Navbar from "./components/Navbar/index";
-import Main from "./components/Main";
-import ProfilePage from "./components/ProfilePage"
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import BizProfile from './components/BizProfile'
+import './App.css'
+import Navbar from './components/Navbar'
+import Home from './components/Home/home'
+import Profile from './components/Profile'
 
 class App extends Component {
   render () {
@@ -13,11 +12,10 @@ class App extends Component {
       <Router>
         <Navbar />
         <Switch>
-        <Route path='/profile' component={ProfilePage}/>
-        <Route path='/newProfile' component={BizProfile}/>
-      
-        <Route path='/main' component={Main}></Route>
-      </Switch>
+          <Route path='/profile' component={Profile} />
+          <Route path='/newProfile' component={BizProfile} />
+          <Route path='/' component={Home} />
+        </Switch>
       </Router>
     )
   }

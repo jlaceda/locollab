@@ -22,9 +22,14 @@ router.post("/profile", (req, res) => {
 
 // edit profile
 router.put("/profile/:id", (req, res) => {
-  res.json({
-    error: "Not Implemented"
-  })
+  const givenId = req.params.id;
+  const changes = req.body;
+  Business
+    .updateOne({ _id: givenId }, changes)
+    .then(response => {
+      if (response.n < 1) return res.json({ error: "Profile not Found" })
+      return res.json({ message: `Profile ${givenId} updated.` })
+    });
 });
 
 router.get("/profiles", (req, res) => {

@@ -3,9 +3,12 @@ const User = require("../models/User");
 const router = require("express").Router();
 
 router.get("/profile/:id", (req, res) => {
-  res.json({
-    error: "Not Implemented"
-  })
+  Business
+    .findById(req.params.id)
+    .exec((err, profile) => {
+      if (err) return res.json({ error: err })
+      return res.json({ profile: profile })
+    });
 });
 
 // new profile

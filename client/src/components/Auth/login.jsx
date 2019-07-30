@@ -3,7 +3,7 @@ import "./style.css";
 
 function Login () {
      return (
-          <div className="card m-4">
+          <div className="card m-auto">
                <div className="card-body">
                     <form>
                          <div className="form-group">

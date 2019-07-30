@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home/home'
 import Profile from './components/Profile'
+import Login from './components/Login'
 
 class App extends Component {
   render () {
@@ -12,6 +13,7 @@ class App extends Component {
       <Router>
         <Navbar />
         <Switch>
+          <Route path='/login' component={Login} />
           <Route path='/profile' component={Profile} />
           <Route path='/newProfile' component={BizProfile} />
           <Route path='/' component={Home} />

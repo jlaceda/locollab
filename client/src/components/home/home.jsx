@@ -6,44 +6,44 @@ import StockPhoto from "./bgsmall.png"
 
 function Home() {
 return(
-<div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4">Businesses in Seattle, WA</h1>
+<div className="container">
+    <div className="jumbotron">
+        <h1 className="display-4">Businesses in Seattle, WA</h1>
     </div>
 
     
-    <div class="media">
-        <img src={StockPhoto} class="mr-3" alt="..."></img>
-         <div class="media-body">
-            <h2 class="mt-0">Jamba Juice</h2>
+    <div className="media">
+        <img src={StockPhoto} className="mr-3" alt="..."></img>
+         <div className="media-body">
+            <h2 className="mt-0">Jamba Juice</h2>
             <p>Smoothies and Juices</p>
         </div>
     </div>
-    <div class="media">
-        <img src={StockPhoto} class="mr-3" alt="..."></img>
-         <div class="media-body">
-            <h2 class="mt-0">Jamba Juice</h2>
+    <div className="media">
+        <img src={StockPhoto} className="mr-3" alt="..."></img>
+         <div className="media-body">
+            <h2 className="mt-0">Jamba Juice</h2>
             <p>Smoothies and Juices</p>
         </div>
     </div>
-    <div class="media">
-        <img src={StockPhoto} class="mr-3" alt="..."></img>
-         <div class="media-body">
-            <h2 class="mt-0">Jamba Juice</h2>
+    <div className="media">
+        <img src={StockPhoto} className="mr-3" alt="..."></img>
+         <div className="media-body">
+            <h2 className="mt-0">Jamba Juice</h2>
             <p>Smoothies and Juices</p>
         </div>
     </div>
-    <div class="media">
-        <img src={StockPhoto} class="mr-3" alt="..."></img>
-         <div class="media-body">
-            <h2 class="mt-0">Jamba Juice</h2>
+    <div className="media">
+        <img src={StockPhoto} className="mr-3" alt="..."></img>
+         <div className="media-body">
+            <h2 className="mt-0">Jamba Juice</h2>
             <p>Smoothies and Juices</p>
         </div>
     </div>
-    <div class="media">
-        <img src={StockPhoto} class="mr-3" alt="..."></img>
-         <div class="media-body">
-            <h2 class="mt-0">Jamba Juice</h2>
+    <div className="media">
+        <img src={StockPhoto} className="mr-3" alt="..."></img>
+         <div className="media-body">
+            <h2 className="mt-0">Jamba Juice</h2>
             <p>Smoothies and Juices</p>
         </div>
     </div>

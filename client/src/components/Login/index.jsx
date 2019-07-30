@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.css";
 
-function Login () {
+function Login() {
      return (
+          <div className="spacing">
           <div className="card m-auto">
                <div className="card-body">
                     <form>
@@ -18,6 +19,7 @@ function Login () {
                          <button type="submit" className="btn btn-primary">Submit</button>
                     </form>
                </div>
+          </div>
           </div>
      )
 }

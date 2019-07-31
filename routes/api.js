@@ -1,5 +1,5 @@
-import { create, find } from "../models/Business";
-import User from "../models/User";
+const Business = require("../models/Business");
+const User = require("../models/User");
 const router = require("express").Router();
 
 router.get("/profile/:id", (req, res) => {
@@ -11,7 +11,8 @@ router.get("/profile/:id", (req, res) => {
 // new profile
 router.post("/profile", (req, res) => {
   const newBusiness = req.body;
-  create(newBusiness)
+  Business
+    .create(newBusiness)
     .then((business, err) => {
       if (err) return res.json({ error: err })
       // TODO: add business to user
@@ -27,7 +28,8 @@ router.put("/profile/:id", (req, res) => {
 });
 
 router.get("/profiles", (req, res) => {
-  find().exec()
+  Business
+    .find().exec()
     .then((profiles, err) => {
       if (err !== undefined) {
         return res.json({
@@ -43,8 +45,8 @@ router.get("/profiles", (req, res) => {
         profiles: profiles
       })
     })
-    .catch(err => res.json({ error: err })
+    .catch(err => res.json({ error: err})
     )
 });
 
-export default router;
+module.exports = router;

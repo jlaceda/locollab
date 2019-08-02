@@ -13,7 +13,7 @@ return(
   <img src={photo} className="mr-3" alt="..."></img>
   </div>
   <div className="col-8">
-  <h1 className="display-4">Business Name<button id="editBtn" type="button">Edit Profile</button></h1>
+  <h1 className="display-4">Business Name  <button id="editBtn" type="button" class="btn btn-secondary btn-sm"><h5>Edit Profile</h5></button></h1>
   <h4>Contact Us:</h4>
   <h5>Phone: </h5>
   <h5>Email: </h5>
@@ -34,6 +34,7 @@ return(
       
       <p className="card-title">Free Samples
       <span className="date">6/17/19 2:30pm Seattle, WA</span>
+      <span><button type="button" class="btn btn-secondary btn-sm">Edit Post</button></span>
       </p>
       
       <p className="card-text">We would like to provide samples of our newest summer smoothies to businesses in the area.</p>
@@ -45,6 +46,7 @@ return(
       
       <p className="card-title">Free Samples
       <span className="date">6/17/19 2:30pm Seattle, WA</span>
+      <span><button type="button" class="btn btn-secondary btn-sm">Edit Post</button></span>
       </p>
       
       <p className="card-text">We would like to provide samples of our newest summer smoothies to businesses in the area.</p>

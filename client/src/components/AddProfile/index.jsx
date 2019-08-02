@@ -2,9 +2,28 @@ import React from "react";
 import "./style.css";
 import API from "../../utils/API";
 
-const AddProfile = props => (
-
-    <div className="container">
+class AddProfile extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            name: ''
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+    handleChange(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+    handleSubmit(event) {
+        event.preventDefault()
+        console.log('handleSubmit');
+        API.addProfile({name: this.state.name})
+    }
+    render() {
+        return (
+            <div className="container">
         <div className="container">
             <button type="back" className="btn btn-primary" onClick={() => window.location.href="/"}>Back</button>
         </div>
@@ -12,14 +31,14 @@ const AddProfile = props => (
             <div className="row">
         <div className="col-md-3"></div>
         <div className="col-md-9">
-            <form className="form-horizontal" onSubmit={() => API.addProfile({name: this.state.name})}>
+            <form className="form-horizontal">
                 <div className="form-group" >
                     <label htmlFor="BizName" className="control-label col-sm-2">Name</label>
-                    <input type="text" className="form-control col-sm-4" id="BizName" aria-describedby="BizName" placeholder="Enter Business name" />
+                    <input name="name" type="text" className="form-control col-sm-4" id="BizName" aria-describedby="BizName" placeholder="Enter Business name" onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="BizLocation">Location</label>
-                    <input type="text" className="form-control col-sm-4" id="BizLocation" aria-describedby="BizLocation" placeholder="Enter Business Location" />
+                    <input name="location" type="text" className="form-control col-sm-4" id="BizLocation" aria-describedby="BizLocation" placeholder="Enter Business Location" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="BizDescription">Description</label>
@@ -49,7 +68,7 @@ const AddProfile = props => (
                 <div className="row">
                 <div className="col-md-2"></div>
                 <div className="col-md-4">
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Submit</button>
                 </div>
                 </div>
             </form>
@@ -57,6 +76,9 @@ const AddProfile = props => (
             </div>
         </div>
     </div>
-);
+        )
+    }
+}
+
 
 export default AddProfile;

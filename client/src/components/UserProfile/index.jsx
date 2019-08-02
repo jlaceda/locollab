@@ -8,12 +8,13 @@ return(
 <div clasName="container">
 <div className="row" id="head">
 <div className="jumbotron">
+    
   <div className="row">
   <div className="col-4">
   <img src={photo} className="mr-3" alt="..."></img>
   </div>
   <div className="col-8">
-  <h1 className="display-4">Business Name  <button id="editBtn" type="button" class="btn btn-secondary btn-sm"><h5>Edit Profile</h5></button></h1>
+  <h1 className="display-4">Business Name <a href='/editProfile'> <button id="editBtn" type="button" class="btn btn-secondary btn-sm"><h5>Edit Profile</h5></button></a></h1>
   <h4>Contact Us:</h4>
   <h5>Phone: </h5>
   <h5>Email: </h5>

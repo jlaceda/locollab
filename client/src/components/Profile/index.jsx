@@ -8,6 +8,7 @@ return(
 <div clasName="container">
 <div className="row" id="head">
 <div className="jumbotron">
+
   <div className="row">
   <div className="col-4">
   <img src={photo} className="mr-3" alt="..."></img>

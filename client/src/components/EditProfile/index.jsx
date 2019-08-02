@@ -7,7 +7,9 @@ function EditProfile() {
 return(
 <div clasName="container">
 <div className="row" id="head">
+
 <div className="jumbotron">
+   
   <div className="row">
   <div className="col-4">
   <div id="filesubmit">
@@ -17,6 +19,7 @@ return(
 
   </div>
   <div className="col-8">
+  <a href='/userProfile'><button>Done editing</button></a>
   <h1 className="display-4" contenteditable="true" id="name">Business Name</h1>
   <h4>Contact Us:</h4>
   <h5 contenteditable="true" id="phone">Phone: </h5>

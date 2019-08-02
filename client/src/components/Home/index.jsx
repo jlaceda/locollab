@@ -1,55 +1,47 @@
 import React from "react";
 import "./style.css";
 import StockPhoto from "./bgsmall.png"
+import API from "../../utils/API";
 
-function Home() {
-return(
-<div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4">Businesses in Seattle, WA</h1>
-    </div>
+class Home extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            profiles: []
+        };
+        API.getProfiles().then(res => {
+            this.setState({
+                profiles: res.data.profiles
+            });
+        })
+    }
 
-    
-    <div class="media">
-        <img src={StockPhoto} class="mr-3" alt="..."></img>
-         <div class="media-body">
-            <h2 class="mt-0">Jamba Juice</h2>
-            <p>Smoothies and Juices</p>
-        </div>
-    </div>
-    <div class="media">
-        <img src={StockPhoto} class="mr-3" alt="..."></img>
-         <div class="media-body">
-            <h2 class="mt-0">Jamba Juice</h2>
-            <p>Smoothies and Juices</p>
-        </div>
-    </div>
-    <div class="media">
-        <img src={StockPhoto} class="mr-3" alt="..."></img>
-         <div class="media-body">
-            <h2 class="mt-0">Jamba Juice</h2>
-            <p>Smoothies and Juices</p>
-        </div>
-    </div>
-    <div class="media">
-        <img src={StockPhoto} class="mr-3" alt="..."></img>
-         <div class="media-body">
-            <h2 class="mt-0">Jamba Juice</h2>
-            <p>Smoothies and Juices</p>
-        </div>
-    </div>
-    <div class="media">
-        <img src={StockPhoto} class="mr-3" alt="..."></img>
-         <div class="media-body">
-            <h2 class="mt-0">Jamba Juice</h2>
-            <p>Smoothies and Juices</p>
-        </div>
-    </div>
+    render() {
+        return (
+            <div class="container">
+                <div class="jumbotron">
+                    <h1 class="display-4">Businesses in Seattle, WA</h1>
+                </div>
 
-</div>
+                {
+                this.state.profiles.map(profile => {
+                    return (
+                        <div class="media" business-id={profile._id}>
+                            <img src={StockPhoto} class="mr-3" alt="..."></img>
+                            <div class="media-body">
+                                <h2 class="mt-0">{profile.name}</h2>
+                                <p>{profile.description}</p>
+                                <p>{profile.location}</p>
+                                <p>{profile.category}</p>
+                            </div>
+                        </div>
+                    )
+                })
+                }
 
-
-)
+            </div>
+        )
+    }
 }
 
 export default Home;

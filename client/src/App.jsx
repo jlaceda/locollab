@@ -5,6 +5,8 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Profile from './components/Profile'
+import UserProfile from './components/UserProfile'
+import EditProfile from './components/EditProfile'
 
 class App extends Component {
   render () {
@@ -12,6 +14,8 @@ class App extends Component {
       <Router>
         <Navbar />
         <Switch>
+          <Route path='/editProfile' component={EditProfile} />
+          <Route path='/userProfile' component={UserProfile} />
           <Route path='/profile' component={Profile} />
           <Route path='/newProfile' component={BizProfile} />
           <Route path='/' component={Home} />

@@ -105,7 +105,7 @@ class AddProfile extends React.Component {
                                     <option value ="Agriculture">Agriculture</option>
                                     <option value ="Consulting">Consulting</option>
                                     <option value ="Finance">Finance</option>
-                                    <option value ="Health/ Fitness">Health</option>
+                                    <option value ="Health/ Fitness">Health/Fitness</option>
                                     <option value ="Media">Media</option>
                                     <option value ="Real Estate">Real Estate</option>
                                     <option value ="Restaurants/ Bars">Restaurants/Bars</option>

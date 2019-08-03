@@ -64,7 +64,7 @@ class EditProfile extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizConfirmPassword">Confirm Password</label>
-                                <input type="password" className="form-control col-sm-4" id="BizContactPassword" aria-describedby="BizContactPassword" placeholder="Atleast 8 letters" required/>
+                                <input type="password" className="form-control col-sm-4" id="BizContactPassword" aria-describedby="BizContactPassword" placeholder="Reenter Password" required/>
                             </div>
                             <div className="form-group" >
                                 <label htmlFor="BizName">Business Name</label>
@@ -76,7 +76,7 @@ class EditProfile extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizDescription">Business Description</label>
-                                <textarea name="bdesc" rows="5" cols="50" name="BizDescription" className="form-control col-sm-5" aria-describedby="BizDescription" placeholder="What does your business do?" onChange={this.handleChange}>
+                                <textarea name="bdesc" rows="5" cols="50" className="form-control col-sm-5" aria-describedby="BizDescription" placeholder="What does your business do?" onChange={this.handleChange}>
                                 </textarea>
                             </div>
                             <div className="form-group">
@@ -92,21 +92,21 @@ class EditProfile extends React.Component {
                                 <input name="website" type="url" className="form-control col-sm-4" id="BizContactwebsite" aria-describedby="BizContactWebsite" placeholder="Enter business webpage" onChange={this.handleChange} />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizCategory" for="sel1"> Business Category</label>
+                                <label htmlFor="BizCategory sel1"> Business Category</label>
                                 <select name="category" className="form-control col-sm-4" id="sel1" onChange={this.handleChange} required>
-                                    <option value ="">Select One</option>
-                                    <option value ="finance">Finance</option>
-                                    <option value ="consulting">Consulting</option>
-                                    <option value ="retail">Retail</option>
-                                    <option value ="rEstate">Real Estate</option>
-                                    <option value ="restaurants">Restaurants/Bars</option>
-                                    <option value ="technology">Technology</option>
-                                    <option value ="agriculture">Agriculture</option>
-                                    <option value ="oFood">Other Food</option>
-                                    <option value ="media">Media</option>
-                                    <option value ="trade">Trade</option>
-                                    <option value ="agriculture">Agriculture</option>
-                                    <option value ="others">Others</option>
+                                <option value ="">Select One</option>
+                                    <option value ="Agriculture">Agriculture</option>
+                                    <option value ="Consulting">Consulting</option>
+                                    <option value ="Finance">Finance</option>
+                                    <option value ="Health/ Fitness">Health/Fitness</option>
+                                    <option value ="Media">Media</option>
+                                    <option value ="Real Estate">Real Estate</option>
+                                    <option value ="Restaurants/ Bars">Restaurants/Bars</option>
+                                    <option value ="Retail">Retail</option>
+                                    <option value ="Other Food">Other Food</option>
+                                    <option value ="Technology">Technology</option>
+                                    <option value ="Trade">Trade</option>
+                                    <option value ="Others">Others</option>
                                 </select>
                             </div>
                             <div className="form-group">

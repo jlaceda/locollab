@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import "./style.css";
 import API from "../../utils/API";
 
@@ -13,6 +14,8 @@ class AddProfile extends React.Component {
             location: '',
             bdesc: '',
             phone: '',
+            bemail: '',
+            website: '',
             category: '',
             audience: ''
         }
@@ -40,7 +43,7 @@ class AddProfile extends React.Component {
                          website: this.state.website,
                          category: this.state.category,
                          audience: this.state.audience
-                        })
+                        }).then()
     }
 
     checkPassword(){}
@@ -71,7 +74,7 @@ class AddProfile extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizConfirmPassword">Confirm Password</label>
-                                <input type="conpassword" className="form-control col-sm-4" id="BizConfirmPassword" aria-describedby="BizConfirmPassword" placeholder="Reenter password" required/>
+                                <input name="conpassword" type="password" className="form-control col-sm-4" id="BizConfirmPassword" aria-describedby="BizConfirmPassword" placeholder="Reenter password" required/>
                             </div>
                             <div className="form-group" >
                                 <label htmlFor="BizName">Business Name</label>
@@ -83,7 +86,7 @@ class AddProfile extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizDescription">Business Description</label>
-                                <textarea name="bdesc" rows="5" cols="50" name="BizDescription" className="form-control col-sm-5" aria-describedby="BizDescription" placeholder="What does your business do?" onChange={this.handleChange}>
+                                <textarea name="bdesc" rows="5" cols="50" className="form-control col-sm-5" aria-describedby="BizDescription" placeholder="What does your business do?" onChange={this.handleChange}>
                                 </textarea>
                             </div>
                             <div className="form-group">
@@ -123,7 +126,7 @@ class AddProfile extends React.Component {
                             <div className="row">
                                 <div className="col-md-2"></div>
                                 <div className="col-md-4">
-                                    <button type="submit" className="btn btn-primary submit" onClick={this.handleSubmit}>Submit</button>
+                                    <button type="submit" className="btn btn-primary submit" onClick={this.handleSubmit}><Link to={`/userProfile`} activeClassName="active">Submit</Link></button>
                                 </div>
                             </div>
                         </form>

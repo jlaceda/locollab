@@ -4,7 +4,7 @@ import AddProfile from './components/AddProfile'
 import './App.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
-import Profile from './components/Profile'
+import OtherProfile from './components/OtherProfile'
 import UserProfile from './components/UserProfile'
 import EditProfile from './components/EditProfile'
 
@@ -16,7 +16,7 @@ class App extends Component {
         <Switch>
           <Route path='/editProfile' component={EditProfile} />
           <Route path='/userProfile' component={UserProfile} />
-          <Route path='/profile' component={Profile} />
+          <Route path='/profile' component={OtherProfile} />
           <Route path='/newProfile' component={AddProfile} />
           <Route path='/' component={Home} />
         </Switch>

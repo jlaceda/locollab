@@ -5,7 +5,8 @@ export default {
     addProfile: function(profile) {
       return axios.post("/api/profile", profile);
     },
-    getProfiles: function() {
-      return axios.get("/api/profiles");
+    // Edit Profile
+    editProfile: function(id) {
+      return axios.put("/api/profile/" + id);
     }
 };

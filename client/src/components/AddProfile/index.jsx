@@ -36,6 +36,8 @@ class AddProfile extends React.Component {
                          location: this.state.location,
                          bdesc: this.state.bdesc,
                          phone: this.state.phone,
+                         bemail: this.state.bemail,
+                         website: this.state.website,
                          category: this.state.category,
                          audience: this.state.audience
                         })
@@ -61,7 +63,7 @@ class AddProfile extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizContactEmail">Email Id (also your username)</label>
-                                <input name="email" type="email" className="form-control col-sm-4" id="BizContactEmail" aria-describedby="BizContactEmail" placeholder="Enter email" onChange={this.handleChange} required/>
+                                <input name="email" type="email" className="form-control col-sm-4" id="BizEmail" aria-describedby="BizEmail" placeholder="Enter email" onChange={this.handleChange} required/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizPassword">Create Password</label>
@@ -87,6 +89,14 @@ class AddProfile extends React.Component {
                             <div className="form-group">
                                 <label htmlFor="BizContactPhone">Contact Phone Number</label>
                                 <input name="phone" type="tel" className="form-control col-sm-3" id="BizContactPhone" aria-describedby="BizContactPhone" placeholder="Enter Phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onChange={this.handleChange}/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="BizContactEmail">Business Email Id </label>
+                                <input name="bemail" type="email" className="form-control col-sm-4" id="BizContactEmail" aria-describedby="BizContactEmail" placeholder="Enter business email" onChange={this.handleChange} />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="BizContactEmail">Business Website </label>
+                                <input name="website" type="url" className="form-control col-sm-4" id="BizContactwebsite" aria-describedby="BizContactWebsite" placeholder="Enter business webpage" onChange={this.handleChange} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizCategory" for="sel1"> Business Category</label>

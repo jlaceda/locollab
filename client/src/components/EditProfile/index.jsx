@@ -84,6 +84,14 @@ class EditProfile extends React.Component {
                                 <input name="phone" type="tel" className="form-control col-sm-3" id="BizContactPhone" aria-describedby="BizContactPhone" placeholder="Enter Phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onChange={this.handleChange}/>
                             </div>
                             <div className="form-group">
+                                <label htmlFor="BizContactEmail">Contact Email </label>
+                                <input name="bemail" type="email" className="form-control col-sm-4" id="BizContactEmail" aria-describedby="BizContactEmail" placeholder="Enter business email" onChange={this.handleChange} />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="BizContactEmail">Business Website </label>
+                                <input name="website" type="url" className="form-control col-sm-4" id="BizContactwebsite" aria-describedby="BizContactWebsite" placeholder="Enter business webpage" onChange={this.handleChange} />
+                            </div>
+                            <div className="form-group">
                                 <label htmlFor="BizCategory" for="sel1"> Business Category</label>
                                 <select name="category" className="form-control col-sm-4" id="sel1" onChange={this.handleChange} required>
                                     <option value ="">Select One</option>

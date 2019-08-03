@@ -10,6 +10,8 @@ const businessSchema = new Schema({
   location: { type: String, required: true },
   bdesc: { type: String },
   phone: { type: String },
+  bemail: { type: String },
+  website: { type: String },
   category: { type: String },
   audience: { type: String }
 });

@@ -8,5 +8,8 @@ export default {
     // Edit Profile
     editProfile: function(id) {
       return axios.put("/api/profile/" + id);
+    },
+    getProfiles: function() {
+      return axios.get("/api/profiles");
     }
 };

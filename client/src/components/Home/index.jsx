@@ -18,18 +18,18 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div class="container">
-                <div class="jumbotron">
-                    <h1 class="display-4">Businesses in Seattle, WA</h1>
+            <div className="container">
+                <div className="jumbotron">
+                    <h1 className="display-4">Businesses in Seattle, WA</h1>
                 </div>
 
                 {
                 this.state.profiles.map(profile => {
                     return (
-                        <div class="media" business-id={profile._id}>
-                            <img src={StockPhoto} class="mr-3" alt="..."></img>
-                            <div class="media-body">
-                                <h2 class="mt-0">{profile.name}</h2>
+                        <div className="media" business-id={profile._id}>
+                            <img src={StockPhoto} className="mr-3" alt="..."></img>
+                            <div className="media-body">
+                                <h2 className="mt-0">{profile.name}</h2>
                                 <p>{profile.description}</p>
                                 <p>{profile.location}</p>
                                 <p>{profile.category}</p>

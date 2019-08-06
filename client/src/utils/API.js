@@ -15,6 +15,6 @@ export default {
     },
     //Specific Profile with id
     specificProfile: function(id) {
-      return axios.get("/api/profile", + id);
+      return axios.get("/api/profile/" + id);
     }
 };

@@ -29,7 +29,7 @@ class Home extends React.Component {
                         <div className="media" business-id={profile._id}>
                             <img src={StockPhoto} className="mr-3" alt="..."></img>
                             <div className="media-body">
-                                <h2 className="mt-0">{profile.name}</h2>
+                                <div className = "mt-0 business-profile-name"> <a href ={"/profile/" + profile._id}> {profile.name} </a></div>
                                 <p>{profile.description}</p>
                                 <p>{profile.location}</p>
                                 <p>{profile.category}</p>

@@ -1,0 +1,8 @@
+[contenteditable="true"] {
+    background: #f7f7f7;
+}
+
+[contenteditable="true"]:focus {
+    background: #fcf8e1;
+    outline: 0;
+}

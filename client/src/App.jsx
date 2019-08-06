@@ -7,6 +7,7 @@ import Home from './components/Home'
 import OtherProfile from './components/OtherProfile'
 import UserProfile from './components/UserProfile'
 import EditProfile from './components/EditProfile'
+import Login from './components/Login'
 
 class App extends Component {
   render () {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route path='/userProfile' component={UserProfile} />
           <Route path='/profile' component={OtherProfile} />
           <Route path='/newProfile' component={AddProfile} />
+          <Route path='/login' component={Login} />
           <Route path='/' component={Home} />
         </Switch>
       </Router>

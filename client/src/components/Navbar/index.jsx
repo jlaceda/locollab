@@ -14,10 +14,10 @@ function Navbar() {
         <div className="navbar-nav">
           <li className="nav-item">
             <Link
-              to="/"
-              className={
-                window.location.pathname === "/"
-              }
+              to="/login"
+              // className={
+              //   window.location.pathname || "/"
+              // }
             >
               Login
             </Link>
@@ -26,9 +26,9 @@ function Navbar() {
           <li className="nav-item">
             <Link
               to="/newProfile"
-              className={
-                window.location.pathname === "/"
-              }
+              // className={
+              //   window.location.pathname || "/"
+              // }
             >
               Register
             </Link>

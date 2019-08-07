@@ -10,22 +10,22 @@ class Home extends React.Component {
             profiles: []
         };
         API.getProfiles().then(res => {
-            this.setState({
-                profiles: res.data.profiles
-            });
+            if (res.data.profiles !== undefined) {
+                this.setState({
+                    profiles: res.data.profiles
+                });
+            }
         })
     }
 
     render() {
-        return (
-            <div className="container">
-                <div className="jumbotron">
-                    <h1 className="display-4">Businesses in Seattle, WA</h1>
-                </div>
-
-                {
-                this.state.profiles.map(profile => {
-                    return (
+        let profiles;
+        if (this.state.profiles.length < 1) {
+            profiles = <div className="media" >No Businesses Found!</div>;
+        } else {
+            profiles = <div>
+                {this.state.profiles.map(profile => {
+                    return(
                         <div className="media" business-id={profile._id}>
                             <img src={StockPhoto} className="mr-3" alt="..."></img>
                             <div className="media-body">
@@ -36,9 +36,15 @@ class Home extends React.Component {
                             </div>
                         </div>
                     )
-                })
-                }
-
+                })}
+            </div>
+        }
+        return (
+            <div className="container">
+                <div className="jumbotron">
+                    <h1 className="display-4">Businesses in Seattle, WA</h1>
+                </div>
+                {profiles}
             </div>
         )
     }

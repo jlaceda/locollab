@@ -102,13 +102,14 @@ router.post('/login',
   // successful login
   function(req, res) {
     const user = req.user;
-    let cookie = req.cookies.userId;
+    let cookie = req.cookies.loggedIn;
     if (cookie === undefined) {
       // no: set a new cookie
-      res.cookie('userId',user._id, { maxAge: 900000 });
-      res.cookie('userName',user.name, { maxAge: 900000 });
-      res.cookie('userEmail',user.email, { maxAge: 900000 });
-      res.cookie('business',user.business, { maxAge: 900000 });
+      res.cookie('loggedIn', "true", { maxAge: 900000 });
+      res.cookie('userId',JSON.stringify(user._id), { maxAge: 900000 });
+      res.cookie('userName',JSON.stringify(user.name), { maxAge: 900000 });
+      res.cookie('userEmail',JSON.stringify(user.email), { maxAge: 900000 });
+      res.cookie('business',JSON.stringify(user.business), { maxAge: 900000 });
       console.log('cookies created successfully');
     } else {
       // yes, cookie was already present 

@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Button from '../SubmitButton';
 import "./style.css";
 import API from "../../utils/API";
 
@@ -141,7 +142,7 @@ class AddProfile extends React.Component {
                             <div className="row">
                                 <div className="col-md-2"></div>
                                 <div className="col-md-4">
-                                    <button type="submit" className="btn btn-primary submit" onClick={this.handleSubmit}><Link to={`/userProfile`} activeClassName="active">Submit</Link></button>
+                                    <Button onClick={this.handleSubmit}></Button>
                                 </div>
                             </div>
                         </form>

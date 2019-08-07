@@ -2,6 +2,11 @@ import React from "react";
 import "./style.css";
 import photo from "../UserProfile/bgsmall.png";
 import API from "../../utils/API";
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
+import Post from '../Post/Post'
+
+Modal.setAppElement('body')
 
 class UserProfile extends React.Component {
   constructor() {
@@ -9,6 +14,7 @@ class UserProfile extends React.Component {
     this.state = {
       // profiles: []
     };
+    
     API.specificProfile().then(res => {
       this.setState({
         profile: res.data.profile
@@ -18,7 +24,7 @@ class UserProfile extends React.Component {
 
   render() {
     return (
-      <div clasName="container">
+      <div className="container">
         <div className="row" id="head">
           <div className="jumbotron">
 
@@ -43,30 +49,8 @@ class UserProfile extends React.Component {
             <h3>Posts by 'businessname'</h3>
           </div>
           <div className="row" id="content">
-            <div className="card">
-              <div className="card-body">
-
-                <p className="card-title">Free Samples
-      <span className="date">6/17/19 2:30pm Seattle, WA</span>
-                  <span><button type="button" class="btn btn-secondary btn-sm">Edit Post</button></span>
-                </p>
-
-                <p className="card-text">We would like to provide samples of our newest summer smoothies to businesses in the area.</p>
-                <button className="btn btn-primary">More Info</button>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-body">
-
-                <p className="card-title">Free Samples
-      <span className="date">6/17/19 2:30pm Seattle, WA</span>
-                  <span><button type="button" class="btn btn-secondary btn-sm">Edit Post</button></span>
-                </p>
-
-                <p className="card-text">We would like to provide samples of our newest summer smoothies to businesses in the area.</p>
-                <button className="btn btn-primary">More Info</button>
-              </div>
-            </div>
+            <Post></Post>
+            <Post></Post>
           </div>
         </div>
       </div>

@@ -97,7 +97,7 @@ class Login extends Component {
                                         </div>
                                    </form>
                                    <p className="lead mt-4">
-                                        No Account? <a href="/users/newaccount">Create Account</a>
+                                        No Account? <a href="/newProfile">Create Account</a>
                                    </p>
                               </div>
                          </div>

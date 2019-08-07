@@ -36,7 +36,7 @@ class UserProfile extends React.Component {
           </div>
           <div className="row" id="content">
             <Post></Post>
-            <Post></Post>
+              
           </div>
         </div>
       </div>

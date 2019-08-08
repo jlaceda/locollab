@@ -2,7 +2,7 @@
 A social networking app for small local businesses
 
 ## Dependencies
-### [![Build Status](https://travis-ci.org/jlaceda/locollab.svg?branch=master)](https://travis-ci.org/jlaceda/locollab) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![GitHub license](https://img.shields.io/badge/License-GPLv3-orange.svg)](https://github.com/facebook/react/blob/master/LICENSE)
+### [![Build Status](https://travis-ci.org/jlaceda/locollab.svg?branch=master)](https://travis-ci.org/jlaceda/locollab) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![GitHub license](https://img.shields.io/badge/License-GPLv3-orange.svg)](https://github.com/jlaceda/locollab/blob/master/LICENSE)
 
 ## Background
 We realize a lot of small businesses are finding it a challenge to market their business and grow due to a variety of reasons- cost, lack of resources. So we decided to build our service that’s aimed at helping small business help each other. They could share costs of events, help build customer base, share bases and so on.

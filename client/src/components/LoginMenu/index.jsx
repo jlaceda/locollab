@@ -15,6 +15,9 @@ class LoginMenu extends React.Component {
         ?<div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div className="navbar-nav">
         <li className="nav-item">
+          <Link to="/userProfile">Business</Link>
+        </li>
+        <li className="nav-item">
           <Link to="/logout">Logout</Link>
         </li>
         </div>
@@ -22,14 +25,10 @@ class LoginMenu extends React.Component {
         :<div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div className="navbar-nav">
           <li className="nav-item">
-            <Link
-              to="/login"
-              // className={
-              //   window.location.pathname || "/"
-              // }
-            >
-              Login
-            </Link>
+            <Link to="/login" >Login</Link>
+          </li>
+            <li className="nav-item">
+            <Link to="/newProfile">Register</Link>
           </li>
         </div>
         </div>

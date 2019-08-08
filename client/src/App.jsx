@@ -4,9 +4,9 @@ import AddProfile from './components/AddProfile'
 import './App.css'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
-import OtherProfile from './components/OtherProfile'
 import UserProfile from './components/UserProfile'
 import EditProfile from './components/EditProfile'
+import BusinessProfile from './components/BusinessProfile';
 import Login from './components/Login'
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
         <Switch>
           <Route path='/editProfile' component={EditProfile} />
           <Route path='/userProfile' component={UserProfile} />
-          <Route path='/profile' component={OtherProfile} />
+          <Route path='/profile/:id' component={BusinessProfile} />
           <Route path='/newProfile' component={AddProfile} />
           <Route path='/login' component={Login} />
           <Route path='/' component={Home} />

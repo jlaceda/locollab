@@ -32,7 +32,7 @@ class BusinessProfile extends React.Component {
               <div className="col-8">
                 <h1 className="display-4">{this.state.profile.bname}</h1>
                 <h4>Contact Us: </h4>
-                <h5>Name: {this.state.profile.name} </h5>
+                <h5>Owner: {this.state.profile.name} </h5>
                 <h5>Phone: {this.state.profile.phone} </h5>
                 <h5>Email: {this.state.profile.bemail} </h5>
                 <h5>{this.state.profile.website}</h5>
@@ -44,7 +44,7 @@ class BusinessProfile extends React.Component {
         <div className="row" id="body">
 
           <div className="row" id="header">
-            <h3>Posts by 'businessname'</h3>
+            <h3>Posts by '{this.state.profile.bname}'</h3>
           </div>
           <div className="row" id="content">
             <div className="card">

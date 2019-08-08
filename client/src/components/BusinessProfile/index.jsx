@@ -21,7 +21,7 @@ class BusinessProfile extends React.Component {
   render() {
     console.log(this.state.profile);
     return (
-      <div clasName="container">
+      <div className="container">
         <div className="row" id="head">
           <div className="jumbotron">
 

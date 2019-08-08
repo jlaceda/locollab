@@ -78,7 +78,7 @@ class AddProfile extends React.Component {
                         <form className="form-horizontal">
                             <div className="form-group" >
                                 <label htmlFor="Name">Name</label>
-                                <input name="name" type="text" className="form-control col-sm-4" id="Name" aria-describedby="BizName" placeholder="Enter Business name" onChange={this.handleChange} required />
+                                <input name="name" type="text" className="form-control col-sm-4" id="Name" aria-describedby="BizName" placeholder="First and Last" onChange={this.handleChange} required />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizContactEmail">Email Id (also your username)</label>
@@ -86,15 +86,15 @@ class AddProfile extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizPassword">Create Password</label>
-                                <input name="password" type="password" className="form-control col-sm-4" id="BizContactPassword" aria-describedby="BizContactPassword" placeholder="Atleast 8 letters" onChange={this.handleChange} required />
+                                <input name="password" type="password" className="form-control col-sm-4" id="BizContactPassword" aria-describedby="BizContactPassword" placeholder="At Least 8 Characters" onChange={this.handleChange} required />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizConfirmPassword">Confirm Password</label>
-                                <input name="conpassword" type="password" className="form-control col-sm-4" id="BizConfirmPassword" aria-describedby="BizConfirmPassword" placeholder="Reenter password" required onChange={this.confirmPassword}/>
+                                <input name="conpassword" type="password" className="form-control col-sm-4" id="BizConfirmPassword" aria-describedby="BizConfirmPassword" placeholder="Re-enter Password" required onChange={this.confirmPassword}/>
                             </div>
                             <div className="form-group" >
                                 <label htmlFor="BizName">Business Name</label>
-                                <input name="bname" type="text" className="form-control col-sm-4" id="BizName" aria-describedby="BizName" placeholder="Enter Business name" onChange={this.handleChange} required />
+                                <input name="bname" type="text" className="form-control col-sm-4" id="BizName" aria-describedby="BizName" placeholder="Enter Business Name" onChange={this.handleChange} required />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizLocation">Location</label>
@@ -111,11 +111,11 @@ class AddProfile extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizContactEmail">Business Email Id </label>
-                                <input name="bemail" type="email" className="form-control col-sm-4" id="BizContactEmail" aria-describedby="BizContactEmail" placeholder="Enter business email" onChange={this.handleChange} />
+                                <input name="bemail" type="email" className="form-control col-sm-4" id="BizContactEmail" aria-describedby="BizContactEmail" placeholder="Enter Business Email" onChange={this.handleChange} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizContactEmail">Business Website </label>
-                                <input name="website" type="url" className="form-control col-sm-4" id="BizContactwebsite" aria-describedby="BizContactWebsite" placeholder="Enter business webpage" onChange={this.handleChange} />
+                                <input name="website" type="url" className="form-control col-sm-4" id="BizContactwebsite" aria-describedby="BizContactWebsite" placeholder="Enter Business Web Address" onChange={this.handleChange} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizCategory sel1"> Business Category</label>

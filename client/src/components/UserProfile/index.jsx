@@ -4,7 +4,7 @@ import photo from "../UserProfile/bgsmall.png";
 import Post from '../Post/Post'
 import {UserContext} from "../../user-context";
 import API from "../../utils/API";
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 class UserProfile extends React.Component {
   constructor() {
@@ -58,10 +58,10 @@ class UserProfile extends React.Component {
                 <img src={photo} className="mr-3" alt="..."></img>
               </div>
               <div className="col-8">
-                <h1 className="display-4">{this.state.profile.bname}<a href='/editProfile'>
+                <h1 className="display-4">{this.state.profile.bname}<Link to='/editProfile'>
                     <button id="editBtn" type="button" className="btn btn-secondary btn-sm">
                       <h5>Edit Profile</h5>
-                      </button></a></h1>
+                      </button></Link></h1>
                 <h4>Contact Us: </h4>
                 <h5>Owner: {this.state.profile.name} </h5>
                 <h5>Phone: {this.state.profile.phone} </h5>

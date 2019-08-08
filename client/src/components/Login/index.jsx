@@ -53,7 +53,7 @@ class Login extends Component {
                          })
                          
                          this.setState({
-                              redirectTo: "/"
+                              redirectTo: "/userProfile"
                          })
                          
                     } else {

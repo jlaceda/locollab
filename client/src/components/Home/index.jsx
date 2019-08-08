@@ -24,9 +24,9 @@ class Home extends React.Component {
             profiles = <div className="media" >No Businesses Found!</div>;
         } else {
             profiles = <div>
-                {this.state.profiles.map(profile => {
+                {this.state.profiles.reverse().map(profile => {
                     return(
-                        <div className="media" business-id={profile._id}>
+                        <div className="media" business-id={profile._id} key={profile._id}>
                             <img src={StockPhoto} className="mr-3" alt="..."></img>
                             <div className="media-body">
                                 <div className = "mt-0 business-profile-name"> <a href ={"/profile/" + profile._id}> {profile.name} </a></div>

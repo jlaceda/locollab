@@ -45,7 +45,7 @@ render() {
           <p className="card-title">
             Free Samples
             <span className="date">6/17/19 2:30pm Seattle, WA</span>
-            <span><button type="button" class="btn btn-secondary btn-sm">Edit Post</button></span>
+            <span><button type="button" className="btn btn-secondary btn-sm">Edit Post</button></span>
           </p>
 
           <p className="card-text">We would like to provide samples of our newest summer smoothies to businesses in the area.</p>

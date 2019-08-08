@@ -1,0 +1,16 @@
+.navbar-brand {
+     font-family: 'Pacifico', cursive;
+     font-size: 25px;
+     letter-spacing: 3px;
+}
+
+.nav-item a {
+     color: #fff;
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 20px;
+     padding-left: 1em;
+}
+
+.pipe {
+     font-size: 25px;
+}

@@ -68,7 +68,7 @@ class AddProfile extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div class="jumbotron">
+                    <div className="jumbotron">
                         <h3 className="display-3">Add your Business</h3>
                     </div>
                 </div>

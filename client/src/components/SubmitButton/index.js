@@ -19,7 +19,7 @@ class Button extends Component {
     return (
       <div>
         {this.renderRedirect()}
-        <button type="submit" className="btn btn-primary mb-2" onClick={this.setRedirect}>Submit</button>
+        <button type="submit" className="btn btn-warning mb-2" onClick={this.setRedirect}>Submit</button>
       </div>
     );
   }

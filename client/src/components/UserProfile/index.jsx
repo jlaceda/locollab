@@ -4,10 +4,7 @@ import photo from "../UserProfile/bgsmall.png";
 import Post from '../Post/Post'
 
 class UserProfile extends React.Component {
-  constructor() {
-    super();
-  }
-
+// Removed useless constructor
   render() {
     return (
       <div className="container">

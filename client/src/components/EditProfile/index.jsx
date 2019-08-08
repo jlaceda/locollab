@@ -28,7 +28,6 @@ class EditProfile extends React.Component {
         event.preventDefault()
         console.log('handleSubmit');
         API.editProfile({ name: this.state.name,
-                         password: this.state.password,
                          bname: this.state.bname,
                          location: this.state.location,
                          bdesc: this.state.bdesc,
@@ -57,14 +56,6 @@ class EditProfile extends React.Component {
                             <div className="form-group" >
                                 <label htmlFor="Name">Name</label>
                                 <input name="name" type="text" className="form-control col-sm-4" id="BizName" aria-describedby="BizName" placeholder="Enter Business name" onChange={this.handleChange} required/>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="BizPassword">Change Password</label>
-                                <input name="password" type="password" className="form-control col-sm-4" id="BizContactPassword" aria-describedby="BizContactPassword" placeholder="Atleast 8 letters" onChange={this.handleChange} required/>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="BizConfirmPassword">Confirm Password</label>
-                                <input type="password" className="form-control col-sm-4" id="BizContactPassword" aria-describedby="BizContactPassword" placeholder="Reenter Password" required/>
                             </div>
                             <div className="form-group" >
                                 <label htmlFor="BizName">Business Name</label>

@@ -6,8 +6,8 @@ export default {
       return axios.post("/api/profile", profile);
     },
     // Edit Profile
-    editProfile: function(id) {
-      return axios.put("/api/profile/" + id);
+    editProfile: function(id, profile) {
+      return axios.put("/api/profile/" + id, profile);
     },
     // All profiles in home page
     getProfiles: function() {

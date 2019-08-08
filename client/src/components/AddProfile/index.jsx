@@ -1,6 +1,6 @@
 import React from "react";
-// import { Link } from 'react-router-dom';
-import Button from '../SubmitButton';
+import { Redirect } from 'react-router-dom';
+// import Button from '../SubmitButton';
 import "./style.css";
 import API from "../../utils/API";
 
@@ -8,6 +8,7 @@ class AddProfile extends React.Component {
     constructor() {
         super()
         this.state = {
+            redirectTo: null,
             name: '',
             email: '',
             password: '',
@@ -24,7 +25,6 @@ class AddProfile extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.confirmPassword = this.confirmPassword.bind(this);
     }
 
     handleChange(event) {
@@ -33,21 +33,11 @@ class AddProfile extends React.Component {
         })
     }
 
-    confirmPassword(event) {
-        this.setState({
-            conpassword : event.target.value,
-        })
-        if (this.state.conpassword === this.state.password) {
-            this.setState({
-                passwordMatch : true
-            })
-        }
-    }
-
     handleSubmit(event) {
         event.preventDefault()
         console.log('handleSubmit');
-        if (this.state.passwordMatch) {
+        if (this.state.conpassword === this.state.password) {
+            console.log(this.state);
             API.addProfile({
                 name: this.state.name,
                 email: this.state.email,
@@ -60,11 +50,23 @@ class AddProfile extends React.Component {
                 website: this.state.website,
                 category: this.state.category,
                 audience: this.state.audience
-            }).then()
+            }).then(res => {
+                console.log(res.data);
+                this.setState({
+                    redirectTo: "/login?newProfile=1"
+                })
+            }).catch(err => {
+                console.log(err)
+            })
+        } else {
+            console.log("passwords did not match, do something here.");
         }
     }
 
     render() {
+        if (this.state.redirectTo) {
+            return <Redirect to={{ pathname: this.state.redirectTo }} />
+       } else {
         return (
             <div className="container">
                 <div className="row">
@@ -90,7 +92,7 @@ class AddProfile extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="BizConfirmPassword">Confirm Password</label>
-                                <input name="conpassword" type="password" className="form-control col-sm-4" id="BizConfirmPassword" aria-describedby="BizConfirmPassword" placeholder="Re-enter Password" required onChange={this.confirmPassword}/>
+                                <input name="conpassword" type="password" className="form-control col-sm-4" id="BizConfirmPassword" aria-describedby="BizConfirmPassword" placeholder="Re-enter Password" required onChange={this.handleChange}/>
                             </div>
                             <div className="form-group" >
                                 <label htmlFor="BizName">Business Name</label>
@@ -142,7 +144,7 @@ class AddProfile extends React.Component {
                             <div className="row">
                                 <div className="col-md-2"></div>
                                 <div className="col-md-4">
-                                    <Button onClick={this.handleSubmit}></Button>
+                                    <button type="submit" className="btn btn-warning mb-2" onClick={this.handleSubmit}>Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -150,6 +152,7 @@ class AddProfile extends React.Component {
                 </div>
             </div>
         )
+       }
     }
 }
 

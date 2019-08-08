@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
 import "./style.css";
 import {UserContext} from "../../user-context";
@@ -10,7 +10,7 @@ class Login extends Component {
           this.state = {
                username: '',
                password: '',
-               reidrectTo: null,
+               redirectTo: null,
                loggedIn: false,
                businessId: "",
                userId: "",
@@ -116,7 +116,7 @@ class Login extends Component {
                                         </div>
                                    </form>
                                    <p className="lead mt-4">
-                                        No Account? <a href="/newProfile">Create Account</a>
+                                        No Account? <Link to="/newProfile">Create Account</Link>
                                    </p>
                               </div>
                          </div>

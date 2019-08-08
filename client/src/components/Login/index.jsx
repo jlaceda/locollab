@@ -10,7 +10,7 @@ class Login extends Component {
           this.state = {
                username: '',
                password: '',
-               reidrectTo: null,
+               redirectTo: null,
                loggedIn: false,
                businessId: "",
                userId: "",

@@ -1,7 +1,8 @@
 import React from "react";
 //import "./style.css";
 import API from "../../utils/API";
-import ReactDOM from 'react-dom';
+// commenting out ReactDOM as it's called but never used.
+// import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 
 Modal.setAppElement('body');

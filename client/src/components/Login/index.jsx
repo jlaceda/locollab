@@ -2,14 +2,18 @@ import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import "./style.css";
+import {UserContext} from "../../user-context";
 
 class Login extends Component {
-     constructor() {
-          super()
+     constructor(props) {
+          super(props)
           this.state = {
                username: '',
                password: '',
-               reidrectTo: null
+               reidrectTo: null,
+               loggedIn: false,
+               businessId: "",
+               userId: "",
           }
      }
 
@@ -22,7 +26,7 @@ class Login extends Component {
      handleSubmit = (event) => {
           event.preventDefault()
           console.log('handleSubmit');
-
+          let userContext = this.context;
           axios
                .post('/user/login', {
                     email: this.state.email,
@@ -30,7 +34,7 @@ class Login extends Component {
                })
                .then(response => {
                     console.log('login response: ')
-                    console.log(response)
+                    console.log(response.data)
                     if (response.data.status === "ok") {
                          // // update App.js state (context API)
                          // this.props.updateUser({
@@ -38,8 +42,23 @@ class Login extends Component {
                          //      username: response.data.username
                          // })
                          // update the state to redirect to home
+                         console.log("response data:", response.data);
+                         console.log(userContext)
+                         console.log(userContext.updateUserContext)
+
+                         userContext.updateUserContext({
+                              loggedIn: true,
+                              businessId: response.data.business,
+                              userId: response.data.userId,
+                         })
+                         
                          this.setState({
-                              redirectTo: '/'
+                              redirectTo: "/"
+                         })
+                         
+                    } else {
+                         this.setState({
+                              redirectTo: "/login?failedLogin=1"
                          })
                     }
                }).catch(error => {
@@ -106,5 +125,6 @@ class Login extends Component {
           }
      }
 }
+Login.contextType = UserContext;
 
 export default Login;

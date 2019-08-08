@@ -98,24 +98,25 @@ const passport = require('passport');
 // });
 
 router.post('/login', 
-  passport.authenticate('login', { failureRedirect: '/login' }),
+  passport.authenticate('login', { failureRedirect: '/login?failedLogin=1' }),
   // successful login
   function(req, res) {
     const user = req.user;
-    let cookie = req.cookies.loggedIn;
-    if (cookie === undefined) {
-      // no: set a new cookie
-      res.cookie('loggedIn', "true", { maxAge: 900000 });
-      res.cookie('userId',JSON.stringify(user._id), { maxAge: 900000 });
-      res.cookie('userName',JSON.stringify(user.name), { maxAge: 900000 });
-      res.cookie('userEmail',JSON.stringify(user.email), { maxAge: 900000 });
-      res.cookie('business',JSON.stringify(user.business), { maxAge: 900000 });
-      console.log('cookies created successfully');
-    } else {
-      // yes, cookie was already present 
-      console.log('cookie exists', cookie);
-    } 
-    // next();
+    // let cookie = req.cookies.loggedIn;
+    // if (cookie === undefined) {
+    //   // no: set a new cookie
+    //   res.cookie('loggedIn', "true", { maxAge: 900000 });
+    //   res.cookie('userId',JSON.stringify(user._id), { maxAge: 900000 });
+    //   res.cookie('userName',JSON.stringify(user.name), { maxAge: 900000 });
+    //   res.cookie('userEmail',JSON.stringify(user.email), { maxAge: 900000 });
+    //   res.cookie('business',JSON.stringify(user.business), { maxAge: 900000 });
+    //   console.log('cookies created successfully');
+    // } else {
+    //   // yes, cookie was already present 
+    //   console.log('cookie exists', cookie);
+    // } 
+    // // next();
+    console.log(user);
     return res.json({
       status: "ok",
       message: "successfully logged in.",
@@ -155,18 +156,18 @@ router.post('/login',
 // });
 
 // Logout
-router.get('/logout', (req, res) => {
-  //req.logout();
-  //req.flash('success_msg', 'You are logged out');
-  //res.redirect('/user/login');
-  res.clearCookie("userId");
-  res.clearCookie("userName");
-  res.clearCookie("userEmail");
-  return res.json({
-    status: "ok",
-    message: "successfully logged out.",
-  });
-  //res.redirect("/");
-});
+// router.get('/logout', (req, res) => {
+//   //req.logout();
+//   //req.flash('success_msg', 'You are logged out');
+//   //res.redirect('/user/login');
+//   res.clearCookie("userId");
+//   res.clearCookie("userName");
+//   res.clearCookie("userEmail");
+//   return res.json({
+//     status: "ok",
+//     message: "successfully logged out.",
+//   });
+//   //res.redirect("/");
+// });
 
 module.exports = router;

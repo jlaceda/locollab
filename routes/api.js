@@ -11,6 +11,15 @@ router.get("/profile/:id", (req, res) => {
     });
 });
 
+router.get("/user/:id", (req, res) => {
+  User
+    .findById(req.params.id)
+    .exec((err, user) => {
+      if (err) return res.json({ error: err })
+      return res.json({ user: user })
+    });
+});
+
 // new profile
 router.post("/profile", (req, res) => {
   const newBusiness = req.body;

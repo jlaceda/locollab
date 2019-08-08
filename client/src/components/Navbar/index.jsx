@@ -1,43 +1,20 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import './style.css';
+import LoginMenu from "../LoginMenu";
 
-function Navbar() {
-
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <Link className="navbarText navbar-brand" to="/">Locollab</Link>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
-          <li className="nav-item">
-            <Link
-              to="/login"
-              // className={
-              //   window.location.pathname || "/"
-              // }
-            >
-              Login
-            </Link>
-          </li>
-          <span className="text-white pipe">&nbsp;|&nbsp;</span>
-          <li className="nav-item">
-            <Link
-              to="/newProfile"
-              // className={
-              //   window.location.pathname || "/"
-              // }
-            >
-              Register
-            </Link>
-          </li>
-
-        </div>
-      </div>
-    </nav>
-  );
+class Navbar extends React.Component {
+  render() {
+    return (
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <Link className="navbarText navbar-brand" to="/">Locollab</Link>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <LoginMenu />
+      </nav>
+    );
+  }
 }
 
 export default Navbar;

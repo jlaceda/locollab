@@ -42,7 +42,7 @@ class App extends Component {
           <Route path='/userProfile' component={UserProfile} />
           <Route path='/profile/:id' component={BusinessProfile} />
           <Route path='/newProfile' component={AddProfile} />
-          <Route path='/login' component={Login} />
+          <Route path='/login*' component={Login} />
           <Route path='/logout' component={Logout} />
           <Route path='/' component={Home} />
         </Switch>

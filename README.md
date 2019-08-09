@@ -15,37 +15,37 @@ Creating an account will allow you to view additional details of and search for 
 ## Technologies and Techniques Used
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 * The following Node Packages were used in the creation of this particular Application.
-    *     **axios**
+    - **axios**
         - Promise based HTTP client for the browser and node.js
-    *     **bcrypt.js**
+    - **bcrypt.js**
         - Password hashing package
-    *     **bootstrap**
+    - **bootstrap**
         - Free collection of tools for creating a websites and web applications.
-    *     **cookie-parser**
+    - **cookie-parser**
         - Parse Cookie header and populate req.cookies with an object keyed by the cookie names.
-    *     **express**
+    - **express**
         - Fast, unopinionated, minimalist web framework for node.
-    *     **heroku**
+    - **heroku**
         - Heroku is a cloud platform that lets companies build, deliver, monitor and scale applications.
-    *     **if-env**
+    - **if-env**
         - Simplify the running of different node environments in one script.
-    *     **mongoose**
+    - **mongoose**
         - MongoDB object modeling tool designed to work in an asynchronous environment.
-    *     **passport**
+    - **passport**
         - Passport is Express-compatible authentication middleware for Node.js.
-    *     **passport-local**
+    - **passport-local**
         - Local username and password authentication strategy for Passport.
-    *     **path**
+    - **path**
         - Node.JS path module
-    *     **react-bootstrap**
+    - **react-bootstrap**
         - Bootstrap 4 components built with React
-    *     **react-dom**
+    - **react-dom**
         - React package for working with the DOM.
-    *     **react-modal**
+    - **react-modal**
         - Accessible modal dialog component for React.JS
-    *     **react-router-dom**
+    - **react-router-dom**
         - DOM bindings for React Router
-    *     **validator**
+    - **validator**
         -   String validation and sanitization
 
 ## Development Notes

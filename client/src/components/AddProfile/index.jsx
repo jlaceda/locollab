@@ -70,8 +70,8 @@ class AddProfile extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="jumbotron">
-                        <h3 className="display-3">Add your Business</h3>
+                    <div className="jumbotron text-center">
+                        <h3 className="display-3">Add Your Business</h3>
                     </div>
                 </div>
                 <div className="row">
@@ -79,48 +79,48 @@ class AddProfile extends React.Component {
                     <div className="col-md-9">
                         <form className="form-horizontal">
                             <div className="form-group" >
-                                <label htmlFor="Name">Name</label>
+                                <label className="font-weight-bold" htmlFor="Name">Name</label>
                                 <input name="name" type="text" className="form-control col-sm-4" id="Name" aria-describedby="BizName" placeholder="First and Last" onChange={this.handleChange} required />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizContactEmail">Email Id (also your username)</label>
+                                <label className="font-weight-bold" htmlFor="BizContactEmail">Email Id (also your username)</label>
                                 <input name="email" type="email" className="form-control col-sm-4" id="BizEmail" aria-describedby="BizEmail" placeholder="Enter email" onChange={this.handleChange} required />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizPassword">Create Password</label>
+                                <label className="font-weight-bold" htmlFor="BizPassword">Create Password</label>
                                 <input name="password" type="password" className="form-control col-sm-4" id="BizContactPassword" aria-describedby="BizContactPassword" placeholder="At Least 8 Characters" onChange={this.handleChange} required />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizConfirmPassword">Confirm Password</label>
+                                <label className="font-weight-bold" htmlFor="BizConfirmPassword">Confirm Password</label>
                                 <input name="conpassword" type="password" className="form-control col-sm-4" id="BizConfirmPassword" aria-describedby="BizConfirmPassword" placeholder="Re-enter Password" required onChange={this.handleChange}/>
                             </div>
                             <div className="form-group" >
-                                <label htmlFor="BizName">Business Name</label>
+                                <label className="font-weight-bold" htmlFor="BizName">Business Name</label>
                                 <input name="bname" type="text" className="form-control col-sm-4" id="BizName" aria-describedby="BizName" placeholder="Enter Business Name" onChange={this.handleChange} required />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizLocation">Location</label>
+                                <label className="font-weight-bold" htmlFor="BizLocation">Location</label>
                                 <input name="location" type="text" className="form-control col-sm-4" id="BizLocation" aria-describedby="BizLocation" placeholder="Enter Business Location" onChange={this.handleChange} required />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizDescription">Business Description</label>
+                                <label className="font-weight-bold" htmlFor="BizDescription">Business Description</label>
                                 <textarea name="bdesc" rows="5" cols="50" className="form-control col-sm-5" aria-describedby="BizDescription" placeholder="What does your business do?" onChange={this.handleChange}>
                                 </textarea>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizContactPhone">Contact Phone Number</label>
+                                <label className="font-weight-bold" htmlFor="BizContactPhone">Contact Phone Number</label>
                                 <input name="phone" type="tel" className="form-control col-sm-3" id="BizContactPhone" aria-describedby="BizContactPhone" placeholder="Enter Phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onChange={this.handleChange} />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizContactEmail">Business Email Id </label>
+                                <label className="font-weight-bold" htmlFor="BizContactEmail">Business Email Id </label>
                                 <input name="bemail" type="email" className="form-control col-sm-4" id="BizContactEmail" aria-describedby="BizContactEmail" placeholder="Enter Business Email" onChange={this.handleChange} />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizContactEmail">Business Website </label>
+                                <label className="font-weight-bold" htmlFor="BizContactEmail">Business Website </label>
                                 <input name="website" type="url" className="form-control col-sm-4" id="BizContactwebsite" aria-describedby="BizContactWebsite" placeholder="Enter Business Web Address" onChange={this.handleChange} />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizCategory sel1"> Business Category</label>
+                                <label className="font-weight-bold" htmlFor="BizCategory sel1"> Business Category</label>
                                 <select name="category" className="form-control col-sm-4" id="sel1" onChange={this.handleChange} required>
                                     <option value="">Select One</option>
                                     <option value="Agriculture">Agriculture</option>
@@ -138,13 +138,12 @@ class AddProfile extends React.Component {
                                 </select>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="BizAudience">Audience</label>
+                                <label className="font-weight-bold" htmlFor="BizAudience">Audience</label>
                                 <input name="audience" type="text" className="form-control col-sm-5" id="BizAudience" aria-describedby="BizAudience" placeholder="Enter Business Audience group" onChange={this.handleChange} />
                             </div>
                             <div className="row">
-                                <div className="col-md-2"></div>
                                 <div className="col-md-4">
-                                    <button type="submit" className="btn btn-warning mb-2" onClick={this.handleSubmit}>Submit</button>
+                                    <button type="submit" className="btn btn-warning font-weight-bold mb-3" onClick={this.handleSubmit}>Submit</button>
                                 </div>
                             </div>
                         </form>

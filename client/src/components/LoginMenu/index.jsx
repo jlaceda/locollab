@@ -4,9 +4,10 @@ import './style.css';
 import {UserContext} from "../../user-context";
 
 class LoginMenu extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+  // Commenting out useless constructor.
+  // constructor(props) {
+  //   super(props)
+  // }
 
   render() {
     return (<UserContext.Consumer>

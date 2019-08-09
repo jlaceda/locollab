@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import StockPhoto from "./bgsmall.png"
 import API from "../../utils/API";
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
     constructor() {
@@ -29,7 +30,7 @@ class Home extends React.Component {
                         <div className="media" business-id={profile._id} key={profile._id}>
                             <img src={StockPhoto} className="mr-3" alt="..."></img>
                             <div className="media-body">
-                                <div className = "mt-0 business-profile-name"> <a href ={"/profile/" + profile._id}> {profile.name} </a></div>
+                                <div className = "mt-0 business-profile-name"> <Link to={"/profile/" + profile._id}> {profile.bname} </Link></div>
                                 <p>{profile.description}</p>
                                 <p>{profile.location}</p>
                                 <p>{profile.category}</p>

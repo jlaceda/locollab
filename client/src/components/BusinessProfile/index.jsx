@@ -31,6 +31,7 @@ class BusinessProfile extends React.Component {
               </div>
               <div className="col-8">
                 <h1 className="display-4">{this.state.profile.bname}</h1>
+                <h3 className="display-6">{this.state.profile.location}</h3>
                 <h4>Contact Us: </h4>
                 <h5>Owner: {this.state.profile.name} </h5>
                 <h5>Phone: {this.state.profile.phone} </h5>
